@@ -11,10 +11,10 @@ let n: null = null
 
 let num: number = undefined
 
+// 会失去ts的静态检查特性
 let notSure: any = 4
 notSure = 'maybe it is a string'
 notSure = true
-
 notSure.myName
 notSure.getName()
 
@@ -25,6 +25,7 @@ let arrOfNumbers: number[] = [1, 2, 3, 4]
 arrOfNumbers.push(5)
 
 function test() {
+  // 类数组类型
   console.log(arguments)
 }
 
