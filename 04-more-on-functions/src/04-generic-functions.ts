@@ -1,19 +1,21 @@
-/* function firstElement(arr: any[]) {
-  return 100
+function firstElement(arr: any[]) {
+  return 100;
 }
 
-firstElement(['a', 'b', 'c']) */
+firstElement(['a', 'b', 'c']);
 
-/* function firstElement<Type>(arr: Type[]): Type | undefined {
-  return arr[0]
+// 使用泛型改造
+function firstElement2<T>(arr: T[]): T | undefined {
+  return arr[0];
 }
 
-firstElement(['a', 'b', 'c'])
-firstElement([1, 2, 3])
-firstElement([]) */
+firstElement2(['a', 'b', 'c']);
+firstElement2([1, 2, 3]);
+firstElement2([]);
 
-/* function map<Input, Output>(arr: Input[], func: (arg: Input) => Output): Output[] {
-  return arr.map(func)
+// 多个泛型 + 类型推断
+function map<I, O>(arr: I[], func: (arg: I) => O): O[] {
+  return arr.map(func);
 }
 
-const parsed = map(['1', '2', '3'], (n) => parseInt(n)) */
+const parsed = map(['1', '2', '3'], (n) => parseInt(n));
