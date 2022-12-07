@@ -1,11 +1,8 @@
-/* type ABC = { a: number, b: number, c: number }
+type ABC = { a: number; b: number; c: number };
 
+// 解构
 function sum({ a, b, c }: ABC) {
-  console.log(a + b + c)
+  console.log(a + b + c);
 }
 
-sum({
-  a: 10,
-  b: 3,
-  c: 9
-}) */
+sum({ a: 10, b: 3, c: 9 });
