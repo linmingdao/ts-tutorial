@@ -21,7 +21,9 @@ function paintShape1(opts: PaintOptions) {
 // 采用解构的形式指定默认值
 function paintShape2({
   shape: Shape,
-  xPos: number = 0,
+  // 请注意，目前没有办法在解构模式中放置类型注释
+  // 这是因为下面的语法在JavaScript中已经有了不同的含义
+  xPos: number = 0, // 这个是为 xPos 定义别名，不是指定类型
   yPos = 0,
 }: PaintOptions) {
   // let xPos = opts.xPos === undefined ? 0 : opts.xPos
