@@ -1,21 +1,21 @@
-// function greet(person: { name: string, age: number }) {
-//   return 'Hello ' + person.name
-// }
+function greet(person: { name: string; age: number }) {
+  return 'Hello ' + person.name;
+}
 
-// interface Person {
-//   name: string
-//   age: number
-// }
+interface Person1 {
+  name: string;
+  age: number;
+}
 
-// function greet(person: Person) {
-//   return 'Hello ' + person.name
-// }
+function greet1(person: Person1) {
+  return 'Hello ' + person.name;
+}
 
-// type Person = {
-//   name: string
-//   age: number
-// }
+type Person2 = {
+  name: string;
+  age: number;
+};
 
-// function greet(person: Person) {
-//   return 'Hello ' + person.name
-// }
+function greet2(person: Person2) {
+  return 'Hello ' + person.name;
+}
