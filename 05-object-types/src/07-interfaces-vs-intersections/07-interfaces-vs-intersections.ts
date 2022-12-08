@@ -1,15 +1,15 @@
-/* interface Sister {
-  name: string
+interface Sister {
+  name: string;
 }
 
 interface Sister {
-  age: number
+  age: number;
 }
 
 const sister1: Sister = {
   name: 'sisterAn',
-  age: 20
-} */
+  age: 20,
+};
 
 /* type Sister = {
   name: string

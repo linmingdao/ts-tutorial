@@ -1,9 +1,9 @@
-/* interface BasicAddress {
-  name?: string
-  street: string
-  city: string
-  country: string
-  postalCode: string
+interface BasicAddress {
+  name?: string;
+  street: string;
+  city: string;
+  country: string;
+  postalCode: string;
 }
 
 // interface AddressWithUnit {
@@ -16,7 +16,7 @@
 // }
 
 interface AddressWithUnit extends BasicAddress {
-  unit: string
+  unit: string;
 }
 
 let awu: AddressWithUnit = {
@@ -25,22 +25,17 @@ let awu: AddressWithUnit = {
   city: '北京',
   postalCode: '100000',
   country: '中国',
-  name: ''
-}
-
+  name: '',
+};
 
 interface Colorful {
-  color: string
+  color: string;
 }
 interface Circle {
-  radius: number
+  radius: number;
 }
 
-interface ColorCircle extends Colorful, Circle {
+// 支持多继承
+interface ColorCircle extends Colorful, Circle {}
 
-}
-
-const cc: ColorCircle = {
-  color: 'red',
-  radius: 100
-} */
+const cc: ColorCircle = { color: 'red', radius: 100 };
