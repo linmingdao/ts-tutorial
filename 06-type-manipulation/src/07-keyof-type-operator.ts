@@ -1,8 +1,5 @@
 // case 1
-type Point = {
-  x: number;
-  y: number;
-};
+type Point = { x: number; y: number };
 
 type P = keyof Point;
 

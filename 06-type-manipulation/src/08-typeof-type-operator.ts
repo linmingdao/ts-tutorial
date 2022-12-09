@@ -1,4 +1,4 @@
-// case 1
+// case 1：原生 js 的 typeof 操作符
 console.log(typeof 'Hello World'); // string
 
 // case 2
@@ -7,20 +7,15 @@ let n: typeof s; // let n: string
 n = 'hello';
 n = 100;
 
-// case 3
-// RetrunType<T>
+// case 3：RetrunType<T>
+type Predicate = (x: unknown) => boolean;
+type K = ReturnType<Predicate>; // type K = boolean
 
-// type Predicate = (x: unknown) => boolean
-// type K = ReturnType<Predicate>
-
-// function f() {
-//   return {
-//     x: 10,
-//     y: 3
-//   }
-// }
-// type P = ReturnType<typeof f>
-// const p: P = 100
+function f() {
+  return { x: 10, y: 3 };
+}
+type L = ReturnType<typeof f>;
+const l: P = 100;
 
 function msgbox() {}
 let shouldContinue: typeof msgbox;
