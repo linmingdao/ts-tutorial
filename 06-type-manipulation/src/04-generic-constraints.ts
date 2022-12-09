@@ -1,10 +1,12 @@
-/* interface Lengthwise {
-  length: number
+interface Lengthwise {
+  length: number;
 }
 
+// 泛型约束
 function loggingIdentity<Type extends Lengthwise>(arg: Type): Type {
-  arg.length
-  return arg
+  arg.length;
+  return arg;
 }
 
-loggingIdentity(['hello', 'world']) */
+loggingIdentity(3);
+loggingIdentity(['hello', 'world']);

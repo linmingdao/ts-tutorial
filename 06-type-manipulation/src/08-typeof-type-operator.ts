@@ -1,10 +1,13 @@
-/* // console.log(typeof 'Hello World')
+// case 1
+console.log(typeof 'Hello World'); // string
 
-// let s = 'hello'
-// let n: typeof s
-// n = 'hello'
-// n = 100
+// case 2
+let s = 'hello';
+let n: typeof s; // let n: string
+n = 'hello';
+n = 100;
 
+// case 3
 // RetrunType<T>
 
 // type Predicate = (x: unknown) => boolean
@@ -20,5 +23,5 @@
 // const p: P = 100
 
 function msgbox() {}
-let shouldContinue: typeof msgbox
-shouldContinue = 100 */
+let shouldContinue: typeof msgbox;
+shouldContinue = 100;
