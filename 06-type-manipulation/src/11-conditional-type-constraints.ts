@@ -1,29 +1,30 @@
-/* // type MessageOf<T> = T['message']
+// 没有使用条件类型约束的时候，该索引类型会报错，因为无法保证泛型T中存在message字段
+type MessageOf1<T> = T['message'];
 
-// type MessageOf<T extends { message: unknown }> = T['message']
+// 使用泛型约束
+type MessageOf2<T extends { message: unknown }> = T['message'];
 
-// type MessageOf<T> = T extends { message: unknown } ? T['message'] : never
+interface Email {
+  message: string;
+}
 
-// interface Email {
-//   message: string
-// }
+type EmailMessageContents = MessageOf2<Email>; // type EmailMessageContents = string
 
-// interface Dog {
-//   bark(): void
-// }
+// 使用条件类型约束
+type MessageOf3<T> = T extends { message: unknown } ? T['message'] : never;
 
-// // type EmailMessageContents = string
-// type EmailMessageContents = MessageOf<Email>
-// const emc: EmailMessageContents = 'balabala...'
+interface Dog {
+  bark(): void;
+}
 
-// type DogMessageContents = MessageOf<Dog>
-// const dmc: DogMessageContents = 'error' as never
+type EmailMessageContents1 = MessageOf3<Email>; // type EmailMessageContents1 = string
+const emc: EmailMessageContents1 = 'balabala...';
 
+type DogMessageContents = MessageOf3<Dog>;
+const dmc1: DogMessageContents = 'error'; // Type 'string' is not assignable to type 'never'.
+const dmc2: DogMessageContents = 'error' as never;
 
-type Flatten<T> = T extends any[] ? T[number] : T
-
-// type Str = string
-type Str = Flatten<string[]>
-
-// type Num = number
-type Num = Flatten<number> */
+// 另外一个例子
+type Flatten<T> = T extends any[] ? T[number] : T;
+type Str = Flatten<string[]>; // type Str = string
+type Num = Flatten<number>; // type Num = number

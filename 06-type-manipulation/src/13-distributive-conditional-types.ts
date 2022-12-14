@@ -1,4 +1,4 @@
-/* type ToArray<Type> = Type extends any ? Type[] : never
+type ToArray<Type> = Type extends any ? Type[] : never;
 
 // type StrArrOrNumArr = string[] | number[]
 // type StrArrOrNumArr = (string | number)[]
@@ -6,9 +6,8 @@
 
 // let saon: StrArrOrNumArr = []
 
+type ToArrayNonDist<Type> = [Type] extends [any] ? Type[] : never;
 
-type ToArrayNonDist<Type> = [Type] extends [any] ? Type[] : never
+type StrArrOrNumArr = ToArrayNonDist<string | number>;
 
-type StrArrOrNumArr = ToArrayNonDist<string | number>
-
-let saon: StrArrOrNumArr = [true] */
+let saon: StrArrOrNumArr = [true];
