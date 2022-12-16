@@ -1,5 +1,5 @@
 // case 1
-type GetReturnType<Type> = Type extends (...args: never[]) => infer Return
+type GetReturnType<T> = T extends (...args: never[]) => infer Return
   ? Return
   : never;
 
