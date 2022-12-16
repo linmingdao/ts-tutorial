@@ -35,11 +35,6 @@ function createLabel2<T extends number | string>(idOrName: T): NameOrId<T> {
   throw '';
 }
 
-// type a = NameLabel
-let v = createLabel2('typescript');
-
-// type b = IdLabel
-let b = createLabel2(2.8);
-
-// type c = NameLabel | IdLabel
-let c = createLabel2(Math.random() > 0.5 ? 'hello' : 42);
+let v = createLabel2('typescript'); // type a = NameLabel
+let b = createLabel2(2.8); // type b = IdLabel
+let c = createLabel2(Math.random() > 0.5 ? 'hello' : 42); // type c = NameLabel | IdLabel
