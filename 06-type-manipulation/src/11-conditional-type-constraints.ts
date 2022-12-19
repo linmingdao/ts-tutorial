@@ -34,7 +34,7 @@ type Flatten<T> = T extends any[] ? T[number] : T;
 type Str = Flatten<string[]>; // type Str = string
 type Num = Flatten<number>; // type Num = number
 
-// 使用infer
+// 使用infer改进上面例子
 type Flatten2<T> = T extends Array<infer Item> ? Item : T;
 type Str1 = Flatten2<string[]>;
 type Str2 = Flatten2<number>;
