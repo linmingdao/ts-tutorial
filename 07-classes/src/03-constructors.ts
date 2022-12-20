@@ -1,4 +1,4 @@
-/* // class Point {
+// class Point {
 //   x: number
 //   y: number
 
@@ -13,12 +13,13 @@
 // console.log(p.y)
 
 class Base {
-  k = 4
+  k = 4;
 }
 
 class Derived extends Base {
-  constructor () {
-    super()
-    console.log(this.k)
+  constructor() {
+    console.log(this.k);
+    super();
+    console.log(this.k);
   }
-} */
+}
