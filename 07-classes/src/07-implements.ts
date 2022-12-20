@@ -1,53 +1,47 @@
-/* // interface Pingable {
-//   ping(): void
-// }
+// case 1：implements 用来规范是否满足特定接口的约束
+interface Pingable {
+  ping(): void;
+}
 
-// class Sonar implements Pingable {
-//   ping() {
-//     console.log('Ping!')
-//   }
-// }
+class Sonar implements Pingable {
+  ping() {
+    console.log('Ping!');
+  }
+}
 
-// class Ball implements Pingable {
-//   ping() {
+class Ball implements Pingable {
+  // ping() {}
 
-//   }
+  pong() {}
+}
 
-//   pong() {
-
-//   }
-// }
-
-
+// case 2：支持一次性实现多个接口
 // interface A {}
 // interface B {}
+// class C implements A, B {}
 
-// class C implements A, B {
+// case 3：
+interface Checkable {
+  check(name: string): boolean;
+}
 
-// }
+class NameChecker implements Checkable {
+  check(s: string) {
+    return s.toLowerCase() === 'ok';
+  }
+}
 
-
-// interface Checkable {
-//   check(name: string) : boolean
-// }
-
-// class NameChecker implements Checkable {
-//   check(s: string) {
-//     return s.toLowerCase() === 'ok'
-//   }
-// }
-
-
+// case 4：
 interface A {
-  x: number
-  y?: number
+  x: number;
+  y?: number;
 }
 
-class C implements A {
-  x = 0
-  y = 1
+class CC implements A {
+  x = 0;
+  y = 1;
 }
 
-const c = new C()
-console.log(c.x)
-console.log(c.y) */
+const c = new CC();
+console.log(c.x);
+console.log(c.y);

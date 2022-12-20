@@ -1,9 +1,9 @@
-/* class MyClass {
-  [s: string]: boolean | ((s: string) => boolean)
+class MyClass {
+  [s: string]: boolean | ((s: string) => boolean);
 
-  x = true
+  x = true;
 
   check(s: string) {
-    return this[s] as boolean
+    return this[s] as boolean;
   }
-} */
+}
