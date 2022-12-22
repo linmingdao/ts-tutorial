@@ -8,14 +8,8 @@ interface DB {
 
 const db: DB = {
   filterUsers: (filter: (this: User) => boolean) => {
-    let user1: User = {
-      admin: true,
-    };
-
-    let user2: User = {
-      admin: false,
-    };
-
+    let user1: User = { admin: true };
+    let user2: User = { admin: false };
     return [user1, user2];
   },
 };
@@ -25,8 +19,8 @@ const admins = db.filterUsers(function (this: User) {
 });
 
 // 注意剪头函数的this问题
-// const admins = db.filterUsers((this: User) => {
-//   return this.admin;
-// });
+const admins1 = db.filterUsers((this: User) => {
+  return this.admin;
+});
 
 console.log(admins);
