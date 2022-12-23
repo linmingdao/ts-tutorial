@@ -24,3 +24,5 @@ class OkGreeter2 {
   // strictPropertyInitialization
   name!: string;
 }
+
+export {};

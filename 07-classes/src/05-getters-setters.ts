@@ -1,20 +1,20 @@
-// class C {
-//   _length = 0
+class C {
+  _length = 0;
 
-//   get length() {
-//     return this._length
-//   }
+  get length() {
+    return this._length;
+  }
 
-//   set length(value) {
-//     this._length = value
-//   }
-// }
+  set length(value) {
+    this._length = value;
+  }
+}
 
-// let c: C = new C()
-// console.log(c.length)
-// c.length = 100
-// c.length = 'hello'
-// console.log(c.length)
+let c: C = new C();
+console.log(c.length);
+c.length = 100;
+c.length = 'hello';
+console.log(c.length);
 
 class Thing {
   _size = 0;
@@ -41,3 +41,5 @@ t.size = 900;
 console.log(t.size);
 t.size = 'hello';
 console.log(t.size);
+
+export {};

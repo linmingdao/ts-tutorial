@@ -45,3 +45,5 @@ class CC implements A {
 const c = new CC();
 console.log(c.x);
 console.log(c.y);
+
+export {};

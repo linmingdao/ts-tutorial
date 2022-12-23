@@ -15,3 +15,5 @@ class Greeter {
 const g = new Greeter('hello');
 g.name = 'a';
 console.log(g.name);
+
+export {};
