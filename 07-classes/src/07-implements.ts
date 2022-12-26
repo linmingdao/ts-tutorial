@@ -16,9 +16,15 @@ class Ball implements Pingable {
 }
 
 // case 2：支持一次性实现多个接口
-// interface A {}
-// interface B {}
-// class C implements A, B {}
+interface A {
+  x: number;
+}
+interface B {}
+class C implements A, B {
+  x = 10;
+}
+
+// 不可以多继承
 
 // case 3：
 interface Checkable {

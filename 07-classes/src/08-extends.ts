@@ -15,3 +15,6 @@ class Dog extends Animal {
 const d = new Dog();
 d.move();
 d.woof(3);
+
+// 只能单继承
+// class Corgi extends Animal, Dog {}
