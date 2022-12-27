@@ -11,7 +11,6 @@ class Sonar implements Pingable {
 
 class Ball implements Pingable {
   // ping() {}
-
   pong() {}
 }
 
